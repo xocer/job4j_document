@@ -45,6 +45,7 @@ public class PassportService {
     }
 
     public List<Passport> findAllReplaceablePassports() {
-        return repository.findAllByFinishDateBefore(LocalDate.now().plusMonths(3));
+        var now = LocalDate.now();
+        return repository.findAllByFinishDateBetween(now, now.plusMonths(3));
     }
 }

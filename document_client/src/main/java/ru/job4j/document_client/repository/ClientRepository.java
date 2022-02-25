@@ -1,17 +1,17 @@
-package ru.job4j.document_client.service;
+package ru.job4j.document_client.repository;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.core.ParameterizedTypeReference;
 import org.springframework.http.HttpMethod;
-import org.springframework.stereotype.Service;
+import org.springframework.stereotype.Repository;
 import org.springframework.web.client.RestTemplate;
 import ru.job4j.document_server.modal.Passport;
 
 import java.util.List;
 
-@Service
+@Repository
 @RequiredArgsConstructor
-public class AnotherService {
+public class ClientRepository {
     private final RestTemplate template;
 
     private String URL = "http://localhost:8080/passport";

@@ -12,4 +12,6 @@ public interface PassportRepository extends CrudRepository<Passport, Integer> {
     List<Passport> findAllBySeries(Integer series);
 
     List<Passport> findAllByFinishDateBefore(LocalDate date);
+
+    List<Passport> findAllByFinishDateBetween(LocalDate now, LocalDate target);
 }
