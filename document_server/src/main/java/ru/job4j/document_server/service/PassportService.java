@@ -15,7 +15,6 @@ public class PassportService {
     private final PassportRepository repository;
 
     public Passport save(Passport passport) {
-        passport.setFinishDate(passport.getDateOfIssue().plusYears(20));
         return repository.save(passport);
     }
 
